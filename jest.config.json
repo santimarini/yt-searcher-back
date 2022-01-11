@@ -1,0 +1,8 @@
+{
+  "coveragePathIgnorePatterns": [
+    "(.test)\\.(ts|tsx|js)$"
+  ],
+  "setupFiles": [
+    "dotenv/config"
+  ]
+}
