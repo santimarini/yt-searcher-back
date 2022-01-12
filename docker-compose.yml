@@ -1,0 +1,21 @@
+version: '2.2'
+
+services:
+  dev:
+    container_name: yt_search_api_dev
+    image: yt-search-back:0.1.0
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: npm run start:dev
+    ports:
+      - 3000:3000
+    networks:
+      - nesjs-network
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    restart: unless-stopped
+
+networks:
+  nesjs-network: null
